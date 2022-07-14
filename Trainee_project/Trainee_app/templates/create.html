@@ -1,0 +1,16 @@
+{% extends 'menu.html' %}
+{% block content %}
+{%load crispy_forms_tags %}
+
+<a href="{% url 'create' %}"class="col-6 float-right">
+    <div class=" btn btn-outline-success  btn-sm">Back to home</div></a><br><br>
+    <h1>Add Trainee</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{Trainee_s|crispy}}
+        <br>
+        <button type="submit" class="btn btn-success btn-lg">save</button>
+        
+    </form>
+{%endblock content%}  
+</html>

@@ -1,0 +1,13 @@
+{% extends 'menu.html' %}
+{% block content%}
+{%load crispy_forms_tags%}
+    <h1>Update Trainees</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{Trainee_u|crispy}}
+        <br>
+        <button type="submit" class="btn btn-success btn-lg">Update</button>
+        
+    </form>
+{%endblock content%}  
+</html>
